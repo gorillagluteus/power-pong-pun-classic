@@ -24,7 +24,7 @@ public class NetworkedPlayer : Photon.MonoBehaviour
             this.transform.localPosition = Vector3.zero;
             this.transform.localRotation = Quaternion.identity;
 
-            avatar.SetActive(false);
+            //avatar.SetActive(false);
         }
     }
 
