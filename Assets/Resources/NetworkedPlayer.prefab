@@ -69,7 +69,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 7215399850214941576}
+  - {fileID: 2824942320789856260}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
