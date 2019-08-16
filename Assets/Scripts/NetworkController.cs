@@ -40,18 +40,21 @@ public class NetworkController : MonoBehaviour
         RoomOptions roomOptions = new RoomOptions() { };
         PhotonNetwork.JoinOrCreateRoom(_room, roomOptions, TypedLobby.Default);
     }
-
-    void OnJoinedRoom()
-    {        
-    }
-    void OnPhotonPlayerConnected(PhotonPlayer player)
+    void loadArena()
     {
-        Debug.Log("checking if lobby is full...");
         if (PhotonNetwork.playerList.Length == 2)
         {
             PhotonNetwork.LoadLevel("arenaScene");
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
+    }
+    void OnJoinedRoom()
+    {
+        loadArena();
+    }
+    void OnPhotonPlayerConnected(PhotonPlayer player)
+    {
+        loadArena();
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
