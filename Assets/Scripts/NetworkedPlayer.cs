@@ -8,26 +8,34 @@ public class NetworkedPlayer : Photon.MonoBehaviour
 
     public Transform playerGlobal;
     public Transform playerLocal;
+    private bool playerInstantiated = false;
 
     void Awake()
     {
-        Debug.Log("Player instantiated");
-
-        if (photonView.isMine)
+        
+    }
+    private void FixedUpdate()
+    {
+        if (playerInstantiated == false)
         {
-            Debug.Log("Player is mine");
+            playerInstantiated = true;
+            Debug.Log("Player instantiated");
 
-            playerGlobal = GameObject.Find("OVRPlayerController").transform;
-            playerLocal = playerGlobal.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor");
+            if (photonView.isMine)
+            {
+                Debug.Log("Player is mine");
 
-            this.transform.SetParent(playerLocal);
-            this.transform.localPosition = Vector3.zero;
-            this.transform.localRotation = Quaternion.identity;
+                playerGlobal = GameObject.Find("OVRPlayerController").transform;
+                playerLocal = playerGlobal.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor");
 
-            //avatar.SetActive(false);
+                this.transform.SetParent(playerLocal);
+                this.transform.localPosition = Vector3.zero;
+                this.transform.localRotation = Quaternion.identity;
+
+                //avatar.SetActive(false);
+            }
         }
     }
-
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
