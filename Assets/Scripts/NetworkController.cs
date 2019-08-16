@@ -42,6 +42,9 @@ public class NetworkController : MonoBehaviour
     }
 
     void OnJoinedRoom()
+    {        
+    }
+    void OnPhotonPlayerConnected(PhotonPlayer player)
     {
         Debug.Log("checking if lobby is full...");
         if (PhotonNetwork.playerList.Length == 2)
@@ -52,7 +55,7 @@ public class NetworkController : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Player " + PhotonNetwork.playerList.Length);
+        //Debug.Log("Player " + PhotonNetwork.playerList.Length);
         this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
         PhotonNetwork.Instantiate("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
     }
