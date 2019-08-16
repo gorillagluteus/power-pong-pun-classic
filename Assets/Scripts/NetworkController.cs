@@ -17,12 +17,14 @@ public class NetworkController : MonoBehaviour
             if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger) || OVRInput.Get(OVRInput.RawButton.RHandTrigger))
             {
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "right";
+                this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
                 startConnection();
                 handChosen = true;
             }
             else if (OVRInput.Get(OVRInput.Button.Three) || OVRInput.Get(OVRInput.Button.Four) || OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.LHandTrigger))
             {
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "left";
+                this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
                 startConnection();
                 handChosen = true;
             }
@@ -48,6 +50,7 @@ public class NetworkController : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("Player " + PhotonNetwork.playerList.Length);
         PhotonNetwork.Instantiate("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
     }
 }
