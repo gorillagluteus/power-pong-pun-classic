@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainHand: 
+  playerNumber: 0
 --- !u!4 &801093746
 Transform:
   m_ObjectHideFlags: 0
@@ -650,7 +651,7 @@ GameObject:
   - component: {fileID: 1904361008}
   m_Layer: 0
   m_Name: Managers
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

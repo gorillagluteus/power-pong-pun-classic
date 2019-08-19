@@ -18,10 +18,12 @@ public class NetworkController : MonoBehaviour
             {
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "right";
                 startConnection();
+                Debug.Log("right");
                 handChosen = true;
             }
             else if (OVRInput.Get(OVRInput.Button.Three) || OVRInput.Get(OVRInput.Button.Four) || OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.LHandTrigger))
             {
+                Debug.Log("left");
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "left";
                 startConnection();
                 handChosen = true;
@@ -42,10 +44,10 @@ public class NetworkController : MonoBehaviour
     }
     void loadArena()
     {
-        if (PhotonNetwork.playerList.Length == 2)
+        if (PhotonNetwork.playerList.Length == 1)
         {
-            PhotonNetwork.LoadLevel("arenaScene");
             SceneManager.sceneLoaded += OnSceneLoaded;
+            PhotonNetwork.LoadLevel("arenaScene");
         }
     }
     void OnJoinedRoom()
@@ -61,5 +63,24 @@ public class NetworkController : MonoBehaviour
         //Debug.Log("Player " + PhotonNetwork.playerList.Length);
         this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
         PhotonNetwork.Instantiate("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
+
+        GameObject localPlayer = GameObject.FindWithTag("Player");
+        int pNum = this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber;
+        
+        if (pNum == 2)
+        {
+            localPlayer.transform.position = GameObject.FindWithTag("cyaSpawn").transform.position;
+            localPlayer.transform.rotation = GameObject.FindWithTag("cyaSpawn").transform.rotation;
+
+        }
+        else if (pNum == 1)
+        {
+             localPlayer.transform.position = GameObject.FindWithTag("magSpawn").transform.position;
+             localPlayer.transform.rotation = GameObject.FindWithTag("magSpawn").transform.rotation;
+        }
+        else
+        {
+              return;
+        }
     }
 }

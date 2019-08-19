@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - magSpawn
+  - cyaSpawn
+  - rHand
+  - lHand
   layers:
   - Default
   - TransparentFX
