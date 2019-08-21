@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class NetworkController : MonoBehaviour
 {
@@ -17,7 +19,6 @@ public class NetworkController : MonoBehaviour
             if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger) || OVRInput.Get(OVRInput.RawButton.RHandTrigger))
             {
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "right";
-                startConnection();
                 Debug.Log("right");
                 handChosen = true;
             }
@@ -25,11 +26,16 @@ public class NetworkController : MonoBehaviour
             {
                 Debug.Log("left");
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "left";
-                startConnection();
                 handChosen = true;
             }
         }
-        
+        if (handChosen == true)
+        {
+            startConnection();
+            GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
+            GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
+        }
+
     }   
     void startConnection()
     {

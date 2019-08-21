@@ -157,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000000027792
+      value: -0.0000037174
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -201,15 +201,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 17.512886
+      value: 42.91079
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 320
+      value: 2988.896
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 329
+      value: 3072.9585
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2300000, guid: 74e8c96059905eb428f92960f41b66d3, type: 3}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 1807063240}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: User Interface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

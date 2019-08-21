@@ -12,7 +12,7 @@ public class paddleScript : MonoBehaviour
     public float paddleForce;
     private Vector3 point;
 
-    void Update()
+    void FixedUpdate()
     {
         RaycastHit[] hits;
         hits = Physics.RaycastAll(hand.transform.position, hand.transform.forward, 100.0F);
@@ -26,8 +26,8 @@ public class paddleScript : MonoBehaviour
             }
         }
         Debug.Log(point);
-        Vector3 direction = (point - transform.position).normalized;
-        rb.AddForce(direction * paddleForce);
+        Vector3 direction = (point - transform.position);
+        rb.velocity = direction * paddleForce;
     }
     // Update is called once per frame
     void Awake()
@@ -46,5 +46,9 @@ public class paddleScript : MonoBehaviour
         {
             hand = GameObject.FindGameObjectWithTag("rHand");
         }
+    }
+    protected void LateUpdate()
+    {
+        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 90);
     }
 }

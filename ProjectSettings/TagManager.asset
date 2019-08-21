@@ -10,6 +10,7 @@ TagManager:
   - lHand
   - paddle
   - hex
+  - User Interface
   layers:
   - Default
   - TransparentFX
