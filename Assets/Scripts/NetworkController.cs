@@ -21,19 +21,19 @@ public class NetworkController : MonoBehaviour
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "right";
                 Debug.Log("right");
                 handChosen = true;
+                GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
+                GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
+                startConnection();
             }
             else if (OVRInput.Get(OVRInput.Button.Three) || OVRInput.Get(OVRInput.Button.Four) || OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.LHandTrigger))
             {
                 Debug.Log("left");
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "left";
                 handChosen = true;
+                GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
+                GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
+                startConnection();
             }
-        }
-        if (handChosen == true)
-        {
-            startConnection();
-            GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
-            GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
         }
 
     }   
