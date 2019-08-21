@@ -57,11 +57,17 @@ public class paddleScript : MonoBehaviour
     {
         if (stream.isWriting)
         {
-            stream.SendNext(this.transform.position);
+            if (mine)
+            {
+                stream.SendNext(this.transform.position);
+            }
         }
         else
         {
-            this.transform.position = (Vector3)stream.ReceiveNext();
+            if (!mine)
+            {
+                this.transform.position = (Vector3)stream.ReceiveNext();
+            }
         }
     }
 }
