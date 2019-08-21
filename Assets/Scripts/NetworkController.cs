@@ -27,7 +27,7 @@ public class NetworkController : MonoBehaviour
             }
             else if (OVRInput.Get(OVRInput.Button.Three) || OVRInput.Get(OVRInput.Button.Four) || OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.LHandTrigger))
             {
-                Debug.Log("left");
+                Debug.Log("left"); 
                 this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().mainHand = "left";
                 handChosen = true;
                 GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
@@ -73,13 +73,13 @@ public class NetworkController : MonoBehaviour
         GameObject localPlayer = GameObject.FindWithTag("Player");
         int pNum = this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber;
         
-        if (pNum == 2)
+        if (pNum == 1)
         {
             localPlayer.transform.position = GameObject.FindWithTag("cyaSpawn").transform.position;
             localPlayer.transform.rotation = GameObject.FindWithTag("cyaSpawn").transform.rotation;
 
         }
-        else if (pNum == 1)
+        else if (pNum == 2)
         {
              localPlayer.transform.position = GameObject.FindWithTag("magSpawn").transform.position;
              localPlayer.transform.rotation = GameObject.FindWithTag("magSpawn").transform.rotation;

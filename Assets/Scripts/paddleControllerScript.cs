@@ -11,13 +11,11 @@ public class paddleControllerScript : MonoBehaviour
         if (pNum == 1)
         {
             this.transform.GetChild(1).GetComponent<paddleScript>().enabled = false;
-            this.transform.GetChild(1).GetComponent<otherPaddle>().enabled = true;
 
         }
         else if (pNum == 2)
         {
             this.transform.GetChild(0).GetComponent<paddleScript>().enabled = false;
-            this.transform.GetChild(0).GetComponent<otherPaddle>().enabled = true;
 
 
         }
