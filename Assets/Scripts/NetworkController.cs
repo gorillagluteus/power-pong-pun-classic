@@ -58,6 +58,7 @@ public class NetworkController : MonoBehaviour
     }
     void OnJoinedRoom()
     {
+        this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
         loadArena();
     }
     void OnPhotonPlayerConnected(PhotonPlayer player)
@@ -67,7 +68,6 @@ public class NetworkController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //Debug.Log("Player " + PhotonNetwork.playerList.Length);
-        this.transform.parent.GetChild(0).GetComponent<localPlayerManager>().playerNumber = PhotonNetwork.playerList.Length;
         PhotonNetwork.Instantiate("NetworkedPlayer", Vector3.zero, Quaternion.identity, 0);
 
         GameObject localPlayer = GameObject.FindWithTag("Player");
