@@ -10,10 +10,6 @@ public class NetworkedPlayer : Photon.MonoBehaviour
     public Transform playerLocal;
     private bool playerInstantiated = false;
 
-    void Awake()
-    {
-        
-    }
     private void FixedUpdate()
     {
         if (playerInstantiated == false)
