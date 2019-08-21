@@ -5,19 +5,16 @@ using UnityEngine;
 public class paddleControllerScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int pNum = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(0).GetComponent<localPlayerManager>().playerNumber;
         if (pNum == 1)
         {
             this.transform.GetChild(0).GetComponent<paddleScript>().enabled = false;
-
         }
         else if (pNum == 2)
         {
             this.transform.GetChild(1).GetComponent<paddleScript>().enabled = false;
-
-
         }
         else
         {
