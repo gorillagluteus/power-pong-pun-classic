@@ -50,7 +50,7 @@ public class NetworkController : MonoBehaviour
     }
     void loadArena()
     {
-        if (PhotonNetwork.playerList.Length == 1)
+        if (PhotonNetwork.playerList.Length == 2)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             PhotonNetwork.LoadLevel("arenaScene");
