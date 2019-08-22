@@ -1475,7 +1475,7 @@ MonoBehaviour:
   handROffset: 000000000000000000000000
   rb: {fileID: 0}
   sightLength: 20
-  paddleForce: 5
+  paddleForce: 10
 --- !u!54 &1023496811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1484,8 +1484,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023496808}
   serializedVersion: 2
-  m_Mass: 20
-  m_Drag: 20
+  m_Mass: 3
+  m_Drag: 0
   m_AngularDrag: 5
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -1752,8 +1752,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548661806}
   serializedVersion: 2
-  m_Mass: 20
-  m_Drag: 20
+  m_Mass: 3
+  m_Drag: 0
   m_AngularDrag: 5
   m_UseGravity: 0
   m_IsKinematic: 0
