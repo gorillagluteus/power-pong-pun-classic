@@ -8,6 +8,7 @@ public class NetworkController : MonoBehaviour
 {
     string _room = "default";
     bool handChosen = false;
+    public GameObject waitSprite;
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -23,6 +24,7 @@ public class NetworkController : MonoBehaviour
                 handChosen = true;
                 GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
                 GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
+                waitSprite.SetActive(true);
                 startConnection();
             }
             else if (OVRInput.Get(OVRInput.Button.Three) || OVRInput.Get(OVRInput.Button.Four) || OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.LHandTrigger))
@@ -32,6 +34,7 @@ public class NetworkController : MonoBehaviour
                 handChosen = true;
                 GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[0].enabled = false;
                 GameObject.FindGameObjectWithTag("User Interface").GetComponentsInChildren<Image>()[1].enabled = false;
+                waitSprite.SetActive(true);
                 startConnection();
             }
         }
@@ -87,6 +90,18 @@ public class NetworkController : MonoBehaviour
         else
         {
               return;
+        } 
+    }
+    GameObject findObj(GameObject parent, string name)
+    {
+        Transform[] trs = parent.GetComponentsInChildren<Transform>();
+        foreach (Transform t in trs)
+        {
+            if (t.name == name)
+            {
+                return t.gameObject;
+            }
         }
+        return null;
     }
 }
