@@ -64,7 +64,10 @@ public class NetworkedPlayer : Photon.MonoBehaviour
             this.transform.rotation = (Quaternion)stream.ReceiveNext();
             avatar.transform.localPosition = (Vector3)stream.ReceiveNext();
             avatar.transform.localRotation = (Quaternion)stream.ReceiveNext();
-            otherPaddle.transform.position = (Vector3)stream.ReceiveNext();
+            if (otherPaddle != null)
+            {
+                otherPaddle.transform.position = (Vector3)stream.ReceiveNext();
+            }
 
         }
     }

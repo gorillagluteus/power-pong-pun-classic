@@ -8,12 +8,9 @@ public class lightController : MonoBehaviour
     public GameObject cyaLight;
     public GameObject whiLight;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        void Start()
-        {
-            StartCoroutine(turnOnLights());
-        }
+        StartCoroutine(turnOnLights());
     }
     IEnumerator turnOnLights()
     {
