@@ -415,7 +415,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225847629}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -589,7 +589,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_Name
-      value: torus4 (3)
+      value: cyamod
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_Layer
@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_LocalPosition.y
@@ -655,12 +655,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2cc9cfae89260344bde378acc21944a, type: 2}
+    - target: {fileID: 2300000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
 --- !u!4 &407615083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1d4c01d2db187dd4888ace768e750160,
+    type: 3}
+  m_PrefabInstance: {fileID: 407615082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &407615084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160,
     type: 3}
   m_PrefabInstance: {fileID: 407615082}
   m_PrefabAsset: {fileID: 0}
@@ -675,7 +685,7 @@ GameObject:
   - component: {fileID: 578872237}
   - component: {fileID: 578872236}
   m_Layer: 0
-  m_Name: LightController
+  m_Name: timeController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,6 +706,9 @@ MonoBehaviour:
   magLight: {fileID: 680977781}
   cyaLight: {fileID: 25162612}
   whiLight: {fileID: 866964944}
+  magPaddle: {fileID: 1362588584}
+  cyaPaddle: {fileID: 407615084}
+  Ball: {fileID: 225847629}
 --- !u!4 &578872237
 Transform:
   m_ObjectHideFlags: 0
@@ -1395,7 +1408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023496808}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -12, y: -0, z: 0}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 1013764766}
@@ -1551,7 +1564,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_Name
-      value: torus4 (3)
+      value: magmod
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
       propertyPath: m_Layer
@@ -1617,12 +1630,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a2866344496ca7b42a0a33bd1a6e496c, type: 2}
+    - target: {fileID: 2300000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d4c01d2db187dd4888ace768e750160, type: 3}
 --- !u!4 &1362588583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1d4c01d2db187dd4888ace768e750160,
+    type: 3}
+  m_PrefabInstance: {fileID: 1362588582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1362588584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1d4c01d2db187dd4888ace768e750160,
     type: 3}
   m_PrefabInstance: {fileID: 1362588582}
   m_PrefabAsset: {fileID: 0}
