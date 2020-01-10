@@ -46,12 +46,12 @@ public class ballScript : MonoBehaviour
         if (loser == "mag")
         {
             ;
-            this.gameObject.GetComponent<Rigidbody>().AddForce(temp, r1, r2, ForceMode.Impulse);
+            this.gameObject.GetComponent<Rigidbody>().AddForce(-temp, r1, r2, ForceMode.Impulse);
 
         }
         if (loser == "cya")
         {
-            this.gameObject.GetComponent<Rigidbody>().AddForce(-temp, r1, r2, ForceMode.Impulse);
+            this.gameObject.GetComponent<Rigidbody>().AddForce(temp, r1, r2, ForceMode.Impulse);
         }
     }
 }
