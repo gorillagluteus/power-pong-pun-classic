@@ -4,11 +4,9 @@ using UnityEngine;
 using System;
 using Random = System.Random;
 
-public int temp;
-
 public class ballScript : MonoBehaviour
 {
-    int temp = -5;
+    public static int temp = -5;
 
     Random rand = new Random();
     // Start is called before the first frame update
