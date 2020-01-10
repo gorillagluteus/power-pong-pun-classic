@@ -12,7 +12,7 @@ public class ballScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartBall();
     }
     // Update is called once per frame
     void Update()
