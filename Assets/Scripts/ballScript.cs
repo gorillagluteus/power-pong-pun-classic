@@ -4,11 +4,13 @@ using UnityEngine;
 using System;
 using Random = System.Random;
 
+public int temp;
 
 public class ballScript : MonoBehaviour
 {
+    int temp = -5;
+
     Random rand = new Random();
-    public static int temp;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,16 +36,7 @@ public class ballScript : MonoBehaviour
     }
     public void StartBall()
     {
-        string t = "";
-        int temp = rand.Next(0,1);
-        if (temp == 0)
-        {
-            t = "mag";
-        }
-        if (temp == 1)
-        {
-            t = "cya";
-        }
+        string t = "cya";
         resetBall(new Vector3(0,0,0), t);
     }
     public void resetBall(Vector3 position, string loser)
