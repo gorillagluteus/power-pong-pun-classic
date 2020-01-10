@@ -42,7 +42,6 @@ public class NetworkController : MonoBehaviour
     }   
     void startConnection()
     {
-        Debug.Log("twitter dot com");
         PhotonNetwork.ConnectUsingSettings("0.1");
     }
     void OnJoinedLobby()

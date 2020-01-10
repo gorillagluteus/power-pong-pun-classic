@@ -13,6 +13,8 @@ TagManager:
   - User Interface
   - magPaddle
   - cyaPaddle
+  - magGoal
+  - cyaGoal
   layers:
   - Default
   - TransparentFX
