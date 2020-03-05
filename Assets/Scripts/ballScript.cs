@@ -13,6 +13,8 @@ public class ballScript : MonoBehaviour
     private int rallyCount = 0;
     private Rigidbody rb;
     private int PADDLE = 10;
+    int magPoint = 0;
+    int cyaPoint = 0;
     Random rand = new Random();
     // Start is called before the first frame update
     void Start()
@@ -43,11 +45,13 @@ public class ballScript : MonoBehaviour
         if (c.gameObject.tag == "magGoal")
         {
             Debug.Log("Cyan Scores!");
+            cyaPoint++;
             resetBall(new Vector3(0, 0, 0), "mag");
         }
         if (c.gameObject.tag == "cyaGoal")
         {
             Debug.Log("Magenta Scores!");
+            magPoint++;
             resetBall(new Vector3(0, 0, 0), "cya");
         }
     }
