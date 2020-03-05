@@ -34,7 +34,7 @@ public class ballScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision c)
     {
-        Debug.Log(c.name);
+        Debug.Log(c.gameObject.name);
         if (c.gameObject.layer == PADDLE)
         {
             rallyCount++;
