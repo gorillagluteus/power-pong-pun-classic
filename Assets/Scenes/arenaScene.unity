@@ -269,9 +269,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temp: -5
-  accelerateMagnitude: 5
-  initMinSpeed: 2.5
-  incrementVariable: 0.5
+  accelerateMagnitude: 1
+  initMinSpeed: 1
+  incrementVariable: 1
 --- !u!114 &225847631
 MonoBehaviour:
   m_ObjectHideFlags: 0
