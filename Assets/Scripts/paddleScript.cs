@@ -25,7 +25,7 @@ public class paddleScript : MonoBehaviour
                 break;
             }
         }
-        Debug.Log(point);
+        //Debug.Log(point);
         Vector3 direction = (point - this.transform.position);
         rb.velocity = direction * paddleForce;
         this.transform.localEulerAngles = new Vector3(0, this.transform.localEulerAngles.y, 90);
