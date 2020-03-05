@@ -9,7 +9,7 @@ public class ballScript : MonoBehaviour
     public int temp = -5;
     public int accelerateMagnitude;
     public float initMinSpeed;
-    private float minSpeed = initMinSpeed;
+    private float minSpeed;
     public float incrementVariable;
     private int rallyCount = 0;
     private Rigidbody rb;
@@ -20,6 +20,7 @@ public class ballScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        minSpeed = initMinSpeed;
         this.rb = this.gameObject.GetComponent<Rigidbody>();
         StartBall();
     }
