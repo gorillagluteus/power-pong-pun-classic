@@ -8,7 +8,8 @@ public class ballScript : MonoBehaviour
 {
     public int temp = -5;
     public int accelerateMagnitude;
-    public float minSpeed;
+    public float initMinSpeed;
+    private float minSpeed = initMinSpeed;
     public float incrementVariable;
     private int rallyCount = 0;
     private Rigidbody rb;
@@ -44,12 +45,14 @@ public class ballScript : MonoBehaviour
         }
         if (c.gameObject.tag == "magGoal")
         {
+            minSpeed = initMinSpeed;
             Debug.Log("Cyan Scores!");
             cyaPoint++;
             resetBall(new Vector3(0, 0, 0), "mag");
         }
         if (c.gameObject.tag == "cyaGoal")
         {
+            minSpeed = initMinSpeed;
             Debug.Log("Magenta Scores!");
             magPoint++;
             resetBall(new Vector3(0, 0, 0), "cya");
@@ -68,7 +71,6 @@ public class ballScript : MonoBehaviour
 
         if (loser == "mag")
         {
-            ;
             this.gameObject.GetComponent<Rigidbody>().AddForce(-temp, r1, r2, ForceMode.Impulse);
 
         }
