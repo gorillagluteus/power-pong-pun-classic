@@ -6,21 +6,38 @@ using Random = System.Random;
 
 public class ballScript : MonoBehaviour
 {
-    public static int temp = -5;
-
+    public int temp = -5;
+    public int accelerateMagnitude;
+    public float minSpeed;
+    public float incrementVariable;
+    private int rallyCount = 0;
+    private Rigidbody rb;
     Random rand = new Random();
     // Start is called before the first frame update
     void Start()
     {
+        this.rb = this.gameObject.GetComponent<Rigidbody>();
         StartBall();
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (rb.velocity.x > 0)
+        {
+            rb.AddForce(accelerateMagnitude, 0 , 0);
+        }
+        else if(rb.velocity.x < 0)
+        {
+            rb.AddForce(-1 * accelerateMagnitude, 0, 0);
+        }
     }
     void OnCollisionEnter(Collision c)
     {
+        if (c.gameObject.layer == "paddle")
+        {
+            rallyCount++;
+            minSpeed += incrementVariable / rallyCount;
+        }
         if (c.gameObject.tag == "magGoal")
         {
             Debug.Log("Cyan Scores!");
