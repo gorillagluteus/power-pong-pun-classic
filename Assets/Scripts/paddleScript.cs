@@ -5,6 +5,8 @@ using UnityEngine;
 public class paddleScript : MonoBehaviour
 {
     public GameObject hand;
+    public SpriteRenderer sr;
+    public ballScript bs;
     public Vector3 handPOffset;
     public int[] handROffset = new int[3];
     public Rigidbody rb;
@@ -25,6 +27,7 @@ public class paddleScript : MonoBehaviour
                 break;
             }
         }
+        sr.
         //Debug.Log(point);
         Vector3 direction = (point - this.transform.position);
         rb.velocity = direction * paddleForce;

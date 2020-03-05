@@ -80,4 +80,12 @@ public class ballScript : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody>().AddForce(temp, r1, r2, ForceMode.Impulse);
         }
     }
+    public int getCyaScore()
+    {
+        return this.cyaPoint;
+    }
+    public int getMagScore()
+    {
+        return this.magPoint;
+    }
 }

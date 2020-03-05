@@ -45,7 +45,6 @@ public class NetworkedPlayer : Photon.MonoBehaviour
         {
             this.otherPaddle = GameObject.FindGameObjectWithTag("cyaPaddle");
             this.myPaddle = GameObject.FindGameObjectWithTag("magPaddle");
-
         }
     }
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

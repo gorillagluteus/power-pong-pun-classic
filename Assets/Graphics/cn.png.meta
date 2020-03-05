@@ -4,22 +4,34 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2283591368637790385
-    second: cn_0
+    second: 0
   - first:
       213: 9212104729004940588
-    second: cn_1
+    second: 1
   - first:
       213: 7127845757305052385
-    second: cn_2
+    second: 2
   - first:
       213: -717061599006425767
-    second: cn_3
+    second: 3
   - first:
       213: -328782836616616090
-    second: cn_4
+    second: 4
   - first:
       213: 3353633527812460007
-    second: cn_5
+    second: 5
+  - first:
+      213: -2035586570653356235
+    second: cn_6
+  - first:
+      213: 7107778176589374637
+    second: cn_7
+  - first:
+      213: 1195776518851401327
+    second: cn_8
+  - first:
+      213: 5411783635876524831
+    second: cn_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cn_0
+      name: 0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95251db0f063d3f438714c8b6c7040fa
+      spriteID: a957c11f201b4764f8182d6123bab658
       internalID: 2283591368637790385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cn_1
+      name: 1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 714
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c93a311eb96a84387a7f2df850d775
+      spriteID: bb9d60a52e84a2e469db209e5f1017e5
       internalID: 9212104729004940588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cn_2
+      name: 2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 1400
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64c847a274895d147835e78370bec2ae
+      spriteID: 96451a0395748d04183047557cda7659
       internalID: 7127845757305052385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cn_3
+      name: 3
       rect:
         serializedVersion: 2
-        x: 210
+        x: 2100
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5606fc0e4a30ab440bc7c5d53c838b21
+      spriteID: 139b56cb34100f5449eaae930d690b98
       internalID: -717061599006425767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cn_4
+      name: 4
       rect:
         serializedVersion: 2
-        x: 280
+        x: 2800
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 884f9bbcf741248439f34448b234870b
+      spriteID: 6ac422f0a64144b458992e4008bcc328
       internalID: -328782836616616090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cn_5
+      name: 5
       rect:
         serializedVersion: 2
-        x: 350
+        x: 3500
         y: 0
-        width: 70
-        height: 50
+        width: 700
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89b2b2ecf6e8fd64fa95ae0a5161cb20
+      spriteID: 1931a9c9735ced74d8d74b6ff9268743
       internalID: 3353633527812460007
       vertices: []
       indices: 
