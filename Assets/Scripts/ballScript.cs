@@ -12,6 +12,7 @@ public class ballScript : MonoBehaviour
     public float incrementVariable;
     private int rallyCount = 0;
     private Rigidbody rb;
+    private int PADDLE = 10;
     Random rand = new Random();
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class ballScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision c)
     {
-        if (c.gameObject.layer == "paddle")
+        if (c.gameObject.layer == PADDLE)
         {
             rallyCount++;
             minSpeed += incrementVariable / rallyCount;
