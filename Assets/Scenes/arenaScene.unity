@@ -270,8 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temp: -5
   accelerateMagnitude: 1
-  cps: {fileID: 0}
-  mps: {fileID: 0}
+  cps: {fileID: 1548661810}
+  mps: {fileID: 1023496810}
   initMinSpeed: 1
   incrementVariable: 1
 --- !u!114 &225847631
