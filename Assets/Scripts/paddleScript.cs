@@ -5,8 +5,7 @@ using UnityEngine;
 public class paddleScript : MonoBehaviour
 {
     public GameObject hand;
-    private int spriteVersion = 0;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public Sprite[] sprites; 
     public ballScript bs;
     public Vector3 handPOffset;

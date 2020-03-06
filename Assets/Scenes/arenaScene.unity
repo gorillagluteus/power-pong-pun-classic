@@ -270,6 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temp: -5
   accelerateMagnitude: 1
+  cps: {fileID: 0}
+  mps: {fileID: 0}
   initMinSpeed: 1
   incrementVariable: 1
 --- !u!114 &225847631
@@ -1633,6 +1635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+  sr: {fileID: 698480091}
   sprites:
   - {fileID: 2578519197382822390, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
   - {fileID: -5794384951750134390, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
@@ -1988,6 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+  sr: {fileID: 1572971022}
   sprites:
   - {fileID: 2283591368637790385, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
   - {fileID: 9212104729004940588, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
