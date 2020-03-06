@@ -45,7 +45,7 @@ public class paddleScript : MonoBehaviour
         {
             this.transform.LookAt(target);
         }
-        this.transform.rotation *= Quaternion.Euler(new Vector3(90, 0, 0));
+        this.transform.rotation *= Quaternion.Euler(new Vector3(180, 270, 270));
     }
     // Update is called once per frame
     void Awake()
