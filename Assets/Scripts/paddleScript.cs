@@ -40,6 +40,12 @@ public class paddleScript : MonoBehaviour
         Vector3 direction = (point - this.transform.position);
         rb.velocity = direction * paddleForce;
         this.transform.localEulerAngles = new Vector3(0, this.transform.localEulerAngles.y, 90);
+        Transform target = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        if (target != null)
+        {
+            this.transform.LookAt(target);
+        }
+        this.transform.rotation *= Quaternion.Euler(new Vector3(90, 0, 0));
     }
     // Update is called once per frame
     void Awake()
