@@ -8,6 +8,8 @@ public class ballScript : MonoBehaviour
 {
     public int temp = -5;
     public int accelerateMagnitude;
+    public paddleScript cps;
+    public paddleScript mps;
     public float initMinSpeed;
     private float minSpeed;
     public float incrementVariable;
@@ -48,6 +50,7 @@ public class ballScript : MonoBehaviour
         {
             minSpeed = initMinSpeed;
             Debug.Log("Cyan Scores!");
+            cps.setScore(cps.getScore() + 1);
             cyaPoint++;
             resetBall(new Vector3(0, 0, 0), "mag");
         }
@@ -55,6 +58,7 @@ public class ballScript : MonoBehaviour
         {
             minSpeed = initMinSpeed;
             Debug.Log("Magenta Scores!");
+            mps.setScore(mps.getScore() + 1);
             magPoint++;
             resetBall(new Vector3(0, 0, 0), "cya");
         }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class paddleScript : MonoBehaviour
 {
     public GameObject hand;
-    public SpriteRenderer sr;
+    private int spriteVersion = 0;
+    private SpriteRenderer sr;
+    public Sprite[] sprites; 
     public ballScript bs;
     public Vector3 handPOffset;
     public int[] handROffset = new int[3];
@@ -13,6 +15,9 @@ public class paddleScript : MonoBehaviour
     public int sightLength = 20;
     public float paddleForce;
     private Vector3 point;
+    private int score;
+    private string MAGENTA = "ff2bff";
+    private string CYAN = "1affff";
 
     void FixedUpdate()
     {
@@ -27,7 +32,7 @@ public class paddleScript : MonoBehaviour
                 break;
             }
         }
-        sr.
+        sr.sprite = sprites[score];
         //Debug.Log(point);
         Vector3 direction = (point - this.transform.position);
         rb.velocity = direction * paddleForce;
@@ -50,5 +55,14 @@ public class paddleScript : MonoBehaviour
         {
             hand = GameObject.FindGameObjectWithTag("rHand");
         }
+    }
+    public int setScore(int score)
+    {
+        this.score = score;
+        return this.score;
+    }
+    public int getScore()
+    {
+        return this.score;
     }
 }

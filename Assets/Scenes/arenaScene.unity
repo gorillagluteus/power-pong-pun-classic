@@ -1048,13 +1048,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698480089}
-  m_LocalRotation: {x: 0.6830127, y: 0.18301274, z: -0.18301274, w: 0.6830127}
+  m_LocalRotation: {x: 0.35355335, y: 0.61237246, z: -0.61237246, w: 0.35355335}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1023496809}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 30.000002, z: -90}
 --- !u!212 &698480091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1633,6 +1633,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+  sprites:
+  - {fileID: 2578519197382822390, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  - {fileID: -5794384951750134390, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  - {fileID: 1040020708755482004, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  - {fileID: -4072415506073773463, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  - {fileID: 7504888978656665359, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  - {fileID: 1288209874788173130, guid: ea557dffe28fcd741ba0392e20773276, type: 3}
+  bs: {fileID: 225847630}
   handPOffset: {x: 0, y: 0, z: 0}
   handROffset: 000000000000000000000000
   rb: {fileID: 0}
@@ -1980,11 +1988,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+  sprites:
+  - {fileID: 2283591368637790385, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  - {fileID: 9212104729004940588, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  - {fileID: 7127845757305052385, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  - {fileID: -717061599006425767, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  - {fileID: -328782836616616090, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  - {fileID: 3353633527812460007, guid: b39cd6a6d7ba7c042aa7c09598cd5380, type: 3}
+  bs: {fileID: 225847630}
   handPOffset: {x: 0, y: 0, z: 0}
   handROffset: 000000000000000000000000
   rb: {fileID: 0}
   sightLength: 20
-  paddleForce: 5
+  paddleForce: 10
 --- !u!1 &1559259151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,13 +2116,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572971020}
-  m_LocalRotation: {x: 0.6830127, y: 0.18301274, z: -0.18301274, w: 0.6830127}
+  m_LocalRotation: {x: 0.35355335, y: 0.61237246, z: -0.61237246, w: 0.35355335}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1548661807}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 30, z: -90}
 --- !u!212 &1572971022
 SpriteRenderer:
   m_ObjectHideFlags: 0
