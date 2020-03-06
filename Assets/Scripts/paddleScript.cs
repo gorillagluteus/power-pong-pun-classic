@@ -31,6 +31,10 @@ public class paddleScript : MonoBehaviour
                 break;
             }
         }
+        if (score >= sprites.Length)
+        {
+            score = sprites.Length - 1;
+        }
         sr.sprite = sprites[score];
         //Debug.Log(point);
         Vector3 direction = (point - this.transform.position);
@@ -58,10 +62,6 @@ public class paddleScript : MonoBehaviour
     public int setScore(int score)
     {
         this.score = score;
-        if (this.score > sprites.Length)
-        {
-            this.score = sprites.Length - 1;
-        }
         return this.score;
     }
     public int getScore()
