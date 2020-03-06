@@ -58,9 +58,9 @@ public class paddleScript : MonoBehaviour
     public int setScore(int score)
     {
         this.score = score;
-        if (this.score > sprites.Length())
+        if (this.score > sprites.Length)
         {
-            this.score = sprites.Length() - 1;
+            this.score = sprites.Length - 1;
         }
         return this.score;
     }
